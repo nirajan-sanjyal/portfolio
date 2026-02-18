@@ -1,0 +1,387 @@
+{% extends "profiles/base.html" %}
+
+{% block title %}Nirajan Sanjyal | Portfolio{% endblock %}
+
+{% block content %}
+<section id="home" class="hero">
+    <aside class="profile-card group">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80" alt="Profile photo">
+        <div class="profile-overlay"></div>
+    </aside>
+
+    <div>
+        <h1>Nirajan Sanjyal</h1>
+        <span class="hero-intro text-primary border-r-2 border-primary animate-pul" id="hero-rotating-text">I'm a Full-Stack Developer</span>
+        <p class="hero-copy">
+            Full-stack developer skilled in Python, Go, C# (.NET), and JavaScript.
+            Building scalable web applications, APIs, and dynamic frontends with expertise in CRM systems,
+            HR portals, and educational platforms.
+        </p>
+
+        <div class="info-grid">
+            <div class="info-item"><strong><i class="fa-solid fa-phone inline-icon"></i>Phone:</strong> 9864755746</div>
+            <div class="info-item"><strong>Email:</strong> sanjyalnirajan6@gmail.com</div>
+            <div class="info-item info-item--full"><strong>Address:</strong> Kathmandu Metropolitan City, Bagmati Province, Nepal</div>
+        </div>
+
+        <div class="hero-actions">
+            <a class="button" href="#contact">Get In Touch</a>
+            <a class="button secondary" href="#">Download cv</a>
+        </div>
+
+        <div class="social-links">
+            <a class="social-icon" href="https://www.facebook.com/nirajan.sanjyal.5" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-icon" href="https://www.instagram.com/sanjyalnirajan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a class="social-icon" href="https://www.linkedin.com/in/nirajan-sanjyal-929980345/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon" href="https://github.com/nirajan-sanjyal" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p class="subcopy">
+        I am a Bachelor in Computer Application (BCA) student passionate about full-stack development 
+        and modern web technologies. I work with Python, Django, JavaScript, and databases to build 
+        responsive websites and dynamic web applications. I enjoy solving real-world problems through 
+        clean, efficient code and continuously improving my technical skills through practical projects.
+    </p>
+
+    <div class="about-switch">
+        <div class="about-pill">
+            <button class="about-tab is-active" data-target="experience-panel">
+                <i class="fa-solid fa-briefcase"></i> Experience
+            </button>
+            <button class="about-tab" data-target="education-panel">
+                <i class="fa-solid fa-graduation-cap"></i> Education
+            </button>
+        </div>
+    </div>
+
+   <div id="experience-panel" class="about-panel is-active">
+        <h2 class="about-heading">
+            <i class="fa-solid fa-briefcase"></i> Professional Experience
+        </h2>
+
+        <div class="timeline-wrap">
+            <article class="card timeline-item is-active" tabindex="0">
+                <h3 class="timeline-title">Gaau Besi Logistic</h3>
+                <p class="timeline-meta">Backend Developer | 2024 - Present</p>
+                <p>
+                    Designing and developing scalable backend systems for logistics and operational management.
+                    Built and maintained a complete HR Management System to handle employee records, attendance,
+                    payroll processes, and reporting. Developed RESTful APIs using Django and integrated
+                    dynamic frontend features using JavaScript for real-time tracking and smooth user interaction.
+                    Optimized database queries and improved system performance for reliable, high-volume operations.
+                </p>
+            </article>
+
+            <article class="card timeline-item" tabindex="0">
+                <h3 class="timeline-title">Godhuli IT Solution</h3>
+                <p class="timeline-meta">Backend Developer | 2023 - 2024</p>
+                <p>
+                    Developed and maintained CRM systems, HR portals, and e-commerce platforms for multiple clients.
+                    Built secure backend applications using Django, implemented authentication systems,
+                    payment integrations, and product management features. Enhanced user experience by
+                    integrating JavaScript-based dynamic interfaces and improving overall application performance.
+                    Collaborated closely with frontend teams to deliver complete full-stack solutions.
+                </p>
+            </article>
+        </div>
+    </div>
+    <div id="education-panel" class="about-panel">
+    <h2 class="about-heading">
+        <i class="fa-solid fa-graduation-cap"></i> Education
+    </h2>
+
+    <div class="timeline-wrap">
+            <article class="card timeline-item is-active" tabindex="0">
+                <h3 class="timeline-title">Patan Multiple Campus</h3>
+                <p class="timeline-meta">Bachelor in Computer Application (BCA) | 2022 - Present</p>
+                <p>
+                    Currently pursuing a Bachelor in Computer Application with a focus on 
+                    programming, web development, database management, and software engineering. 
+                    Actively working on practical projects to strengthen problem-solving and 
+                    development skills.
+                </p>
+            </article>
+
+            <article class="card timeline-item" tabindex="0">
+                <h3 class="timeline-title">Herald International College</h3>
+                <p class="timeline-meta">+2 Science | 2019 - 2021</p>
+                <p>
+                    Completed higher secondary education with a science background, building 
+                    strong foundations in mathematics, computer fundamentals, and logical reasoning 
+                    that support advanced computing studies.
+                </p>
+            </article>
+        </div>
+    </div>
+
+</section>
+
+<section id="skills" class="section">
+    <h2>Skills & Expertise</h2>
+    <p class="subcopy">
+        A comprehensive overview of technical skills and competencies across languages, frameworks,
+        databases, cloud tools, and performance engineering.
+    </p>
+
+    <div class="skills-grid">
+        <article class="skills-card bg-blue">
+            <h4>Programming Languages</h4>
+            <div class="chips">
+                <span class="chip">Python</span>
+                <span class="chip">PHP</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">C# (.NET)</span>
+                <span class="chip">HTML5</span>
+                <span class="chip">CSS3</span>
+            </div>
+        </article>
+
+        <article class="skills-card bg-green">
+            <h4>Backend & Frameworks</h4>
+            <div class="chips">
+                <span class="chip">Django</span>
+                <span class="chip">Django REST Framework</span>
+                <span class="chip">.NET Web API</span>
+                <span class="chip">jQuery</span>
+            </div>
+        </article>
+
+        <article class="skills-card bg-purple">
+            <h4>Databases</h4>
+            <div class="chips">
+                <span class="chip">PostgreSQL</span>
+                <span class="chip">MySQL</span>
+                <span class="chip">SQLite</span>
+            </div>
+        </article>
+
+        <article class="skills-card bg-orange">
+            <h4>API Development & Integration</h4>
+            <div class="chips">
+                <span class="chip">RESTful APIs</span>
+                <span class="chip">JWT Authentication</span>
+                <span class="chip">AJAX</span>
+                <span class="chip">Third-Party API Integration</span>
+            </div>
+        </article>
+
+        <article class="skills-card bg-red">
+            <h4>Tools & Version Control</h4>
+            <div class="chips">
+                <span class="chip">Git</span>
+                <span class="chip">GitHub</span>
+                <span class="chip">Postman</span>
+                <span class="chip">VS Code</span>
+            </div>
+        </article>
+
+        <article class="skills-card bg-indigo">
+            <h4>Testing & Performance</h4>
+            <div class="chips">
+                <span class="chip">Unit Testing</span>
+                <span class="chip">Debugging</span>
+                <span class="chip">API Optimization</span>
+                <span class="chip">Performance Tuning</span>
+            </div>
+        </article>
+    </div>
+
+    <div class="stats">
+        <div class="stat"><strong>3+</strong><p>Years Experience</p></div>
+        <div class="stat"><strong>8+</strong><p>Technologies</p></div>
+        <div class="stat"><strong>10+</strong><p>Projects Completed</p></div>
+        <div class="stat"><strong>2</strong><p>Companies</p></div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Get in Touch</h2>
+    <p class="subcopy">
+        Have a project in mind or want to discuss opportunities? I'd love to hear from you.
+        Let's create something amazing together.
+    </p>
+
+    {% if messages %}
+    <div class="flash-messages">
+        {% for message in messages %}
+        <div class="flash-item {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="contact-grid">
+        <article class="card">
+            <h3 class="contact-title"><i class="fa-regular fa-message"></i> Send me a message</h3>
+            <form method="post">
+                {% csrf_token %}
+                <label for="name">Full Name</label>
+                <input id="name" type="text" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email Address</label>
+                <input id="email" type="email" name="email" placeholder="Enter your email address" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or how I can help" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </article>
+
+        <article class="card">
+            <h3 class="contact-title"><i class="fa-regular fa-comment-dots"></i> Let's Connect</h3>
+            <p>
+                I'm always interested in new opportunities and exciting projects.
+                Whether you're looking for a backend developer or want to collaborate on something innovative,
+                feel free to reach out.
+            </p>
+
+            <div class="info-list" style="margin-top: 1.1rem;">
+                <div class="contact-point">
+                    <span class="icon-box"><i class="fa-regular fa-envelope"></i></span>
+                    <span class="contact-point-text"><strong>Email</strong><span>sanjyalnirajan6@gmail.com</span></span>
+                </div>
+                <div class="contact-point">
+                    <span class="icon-box"><i class="fa-solid fa-phone"></i></span>
+                    <span class="contact-point-text"><strong>Phone</strong><span>9864755746</span></span>
+                </div>
+                <div class="contact-point">
+                    <span class="icon-box"><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="contact-point-text"><strong>Location</strong><span>Kathmandu, Nepal</span></span>
+                </div>
+            </div>
+
+            <p class="follow-text">Follow me on</p>
+            <div class="social-links">
+                <a class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>Nirajan Sanjyal</h4>
+                <p>
+                    Lead Backend & Full-Stack Developer skilled in Python, Go, C# (.NET), and JavaScript.
+                    Building scalable web applications, APIs, and dynamic frontends.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/nirajan.sanjyal.5" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/nirajan-sanjyal-929980345/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/nirajan-sanjyal" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Download CV</a>
+            </div>
+
+            <div>
+                <h4>Contact Info</h4>
+                <div class="footer-contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>sanjyalnirajan6@gmail.com</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>9864755746</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Kathmandu, Nepal</span>
+                </div>
+            </div>
+        </div>
+        <p class="footer-note">&copy; 2026 Nirajan Sanjyal. All rights reserved.</p>
+    </footer>
+</section>
+<script>
+    (function () {
+        const lines = [
+            "I'm a Full-Stack Developer",
+            "I'm a Lead Backend Developer",
+            "I'm a Django Expert"
+        ];
+        const target = document.getElementById("hero-rotating-text");
+        let index = 0;
+
+        if (!target) return;
+        let charIndex = 0;
+        let isDeleting = false;
+        let currentLine = lines[index];
+
+        function type() {
+            if (isDeleting) {
+                charIndex -= 1;
+            } else {
+                charIndex += 1;
+            }
+
+            target.textContent = currentLine.slice(0, charIndex);
+
+            if (!isDeleting && charIndex === currentLine.length) {
+                isDeleting = true;
+                setTimeout(type, 1400);
+                return;
+            }
+
+            if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % lines.length;
+                currentLine = lines[index];
+            }
+
+            setTimeout(type, isDeleting ? 45 : 75);
+        }
+
+        type();
+    })();
+
+    (function () {
+        const tabs = document.querySelectorAll(".about-tab");
+        const panels = document.querySelectorAll(".about-panel");
+
+        tabs.forEach(function (tab) {
+            tab.addEventListener("click", function () {
+                const targetId = tab.getAttribute("data-target");
+                tabs.forEach(function (t) { t.classList.remove("is-active"); });
+                panels.forEach(function (panel) { panel.classList.remove("is-active"); });
+                tab.classList.add("is-active");
+                const targetPanel = document.getElementById(targetId);
+                if (targetPanel) targetPanel.classList.add("is-active");
+            });
+        });
+    })();
+
+    (function () {
+        const items = document.querySelectorAll(".timeline-item");
+        if (!items.length) return;
+
+        items.forEach(function (item) {
+            item.addEventListener("click", function () {
+                items.forEach(function (el) { el.classList.remove("is-active"); });
+                item.classList.add("is-active");
+            });
+
+            item.addEventListener("keydown", function (event) {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    item.click();
+                }
+            });
+        });
+    })();
+</script>
+{% endblock %}
