@@ -1,11 +1,11 @@
 {% extends "profiles/base.html" %}
-
+{% load static %}
 {% block title %}Nirajan Sanjyal | Portfolio{% endblock %}
 
 {% block content %}
 <section id="home" class="hero">
     <aside class="profile-card group">
-        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80" alt="Profile photo">
+        <img src="{% static "assets/image/pp2.jpeg" %}" alt="Profile photo">
         <div class="profile-overlay"></div>
     </aside>
 
@@ -127,8 +127,29 @@
         databases, cloud tools, and performance engineering.
     </p>
 
+    <div class="skills-switch" role="tablist" aria-label="Skill categories">
+        <button class="skills-tab is-active" type="button" data-skill-key="programming">
+            <i class="fa-solid fa-code"></i> Programming Languages
+        </button>
+        <button class="skills-tab" type="button" data-skill-key="backend">
+            <i class="fa-solid fa-server"></i> Backend & Web Frameworks
+        </button>
+        <button class="skills-tab" type="button" data-skill-key="database">
+            <i class="fa-solid fa-database"></i> Databases
+        </button>
+        <button class="skills-tab" type="button" data-skill-key="api">
+            <i class="fa-solid fa-crosshairs"></i> API Design & Integration
+        </button>
+        <button class="skills-tab" type="button" data-skill-key="tools">
+            <i class="fa-solid fa-screwdriver-wrench"></i> Tools & Version Control
+        </button>
+        <button class="skills-tab" type="button" data-skill-key="testing">
+            <i class="fa-solid fa-wrench"></i> Testing & Performance
+        </button>
+    </div>
+
     <div class="skills-grid">
-        <article class="skills-card bg-blue">
+        <article class="skills-card bg-blue is-active" tabindex="0" data-skill-key="programming">
             <h4>Programming Languages</h4>
             <div class="chips">
                 <span class="chip">Python</span>
@@ -140,7 +161,7 @@
             </div>
         </article>
 
-        <article class="skills-card bg-green">
+        <article class="skills-card bg-green" tabindex="0" data-skill-key="backend">
             <h4>Backend & Frameworks</h4>
             <div class="chips">
                 <span class="chip">Django</span>
@@ -150,7 +171,7 @@
             </div>
         </article>
 
-        <article class="skills-card bg-purple">
+        <article class="skills-card bg-purple" tabindex="0" data-skill-key="database">
             <h4>Databases</h4>
             <div class="chips">
                 <span class="chip">PostgreSQL</span>
@@ -159,7 +180,7 @@
             </div>
         </article>
 
-        <article class="skills-card bg-orange">
+        <article class="skills-card bg-orange" tabindex="0" data-skill-key="api">
             <h4>API Development & Integration</h4>
             <div class="chips">
                 <span class="chip">RESTful APIs</span>
@@ -169,7 +190,7 @@
             </div>
         </article>
 
-        <article class="skills-card bg-red">
+        <article class="skills-card bg-red" tabindex="0" data-skill-key="tools">
             <h4>Tools & Version Control</h4>
             <div class="chips">
                 <span class="chip">Git</span>
@@ -179,7 +200,7 @@
             </div>
         </article>
 
-        <article class="skills-card bg-indigo">
+        <article class="skills-card bg-indigo" tabindex="0" data-skill-key="testing">
             <h4>Testing & Performance</h4>
             <div class="chips">
                 <span class="chip">Unit Testing</span>
@@ -216,7 +237,7 @@
     <div class="contact-grid">
         <article class="card">
             <h3 class="contact-title"><i class="fa-regular fa-message"></i> Send me a message</h3>
-            <form method="post">
+            <form id="contact-form" method="post">
                 {% csrf_token %}
                 <label for="name">Full Name</label>
                 <input id="name" type="text" name="name" placeholder="Enter your full name" required>
@@ -256,10 +277,10 @@
 
             <p class="follow-text">Follow me on</p>
             <div class="social-links">
-                <a class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a class="social-icon" href="https://www.facebook.com/nirajan.sanjyal.5" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a class="social-icon" href="https://www.instagram.com/sanjyalnirajan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a class="social-icon" href="https://www.linkedin.com/in/nirajan-sanjyal-929980345/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="https://github.com/nirajan-sanjyal" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </article>
     </div>
@@ -269,8 +290,8 @@
             <div>
                 <h4>Nirajan Sanjyal</h4>
                 <p>
-                    Lead Backend & Full-Stack Developer skilled in Python, Go, C# (.NET), and JavaScript.
-                    Building scalable web applications, APIs, and dynamic frontends.
+                    Lead Backend & Full-Stack Developer skilled in Python, C# (.NET), and JavaScript.
+                    Building scalable web applications, APIs, and help in dynamic frontends.
                 </p>
                 <div class="footer-social">
                     <a href="https://www.facebook.com/nirajan.sanjyal.5" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -307,7 +328,50 @@
         <p class="footer-note">&copy; 2026 Nirajan Sanjyal. All rights reserved.</p>
     </footer>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
+    const EMAILJS_PUBLIC_KEY = "PqtEOzbdq4VSgEME2";
+
+    if (window.emailjs && EMAILJS_PUBLIC_KEY !== "YOUR_EMAILJS_PUBLIC_KEY") {
+        window.emailjs.init({
+            publicKey: EMAILJS_PUBLIC_KEY
+        });
+    }
+
+    function Sendmail(e) {
+        e.preventDefault();
+        const subjectField = document.getElementById("subject");
+        const subject = subjectField ? subjectField.value.trim() : "Portfolio Contact";
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        console.log(subject, email, message);
+
+        const templateParams = {
+            subject: subject,
+            email: email,
+            message: message
+        };
+
+        if (!window.emailjs || EMAILJS_PUBLIC_KEY === "YOUR_EMAILJS_PUBLIC_KEY") {
+            alert("Set your EmailJS public key first.");
+            return false;
+        }
+
+        window.emailjs.send("service_7gx7a1u", "template_1hzco6h", templateParams)
+            .then((response) => {
+                alert("Message sent successfully!");
+                console.log("SUCCESS!", response.status, response.text);
+                const form = document.getElementById("contact-form");
+                if (form) form.reset();
+            }, (err) => {
+                alert("Failed to send message. Please try again.");
+                console.error("FAILED...", err);
+            });
+
+        return false;
+    }
+
     (function () {
         const lines = [
             "I'm a Full-Stack Developer",
@@ -382,6 +446,47 @@
                 }
             });
         });
+    })();
+
+    (function () {
+        const cards = document.querySelectorAll(".skills-card");
+        const tabs = document.querySelectorAll(".skills-tab");
+        if (!cards.length || !tabs.length) return;
+
+        function setActive(card) {
+            const skillKey = card.getAttribute("data-skill-key");
+            cards.forEach(function (item) { item.classList.remove("is-active"); });
+            card.classList.add("is-active");
+            tabs.forEach(function (tab) {
+                tab.classList.toggle("is-active", tab.getAttribute("data-skill-key") === skillKey);
+            });
+        }
+
+        cards.forEach(function (card) {
+            card.addEventListener("mouseenter", function () { setActive(card); });
+            card.addEventListener("focus", function () { setActive(card); });
+            card.addEventListener("click", function () { setActive(card); });
+        });
+
+        tabs.forEach(function (tab) {
+            tab.addEventListener("click", function () {
+                const skillKey = tab.getAttribute("data-skill-key");
+                const targetCard = document.querySelector('.skills-card[data-skill-key="' + skillKey + '"]');
+                if (targetCard) {
+                    setActive(targetCard);
+                    targetCard.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
+                }
+            });
+        });
+
+        const defaultCard = document.querySelector(".skills-card.is-active") || cards[0];
+        setActive(defaultCard);
+    })();
+
+    (function () {
+        const contactForm = document.getElementById("contact-form");
+        if (!contactForm) return;
+        contactForm.addEventListener("submit", Sendmail);
     })();
 </script>
 {% endblock %}

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,7 +89,7 @@
         main {
             width: 100%;
             margin: 0 auto;
-            padding: 0 1.2rem 0;
+            padding: 0;
         }
 
         section {
@@ -109,13 +110,20 @@
             grid-template-columns: 1fr;
             gap: 1rem;
             align-items: center;
-            background:
-                linear-gradient(90deg, rgba(8, 84, 143, 0.68), rgba(20, 136, 221, 0.36)),
-                url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2200&q=80") center/cover no-repeat;
-            border-radius: 18px;
+            background-image:
+                linear-gradient(90deg, rgba(8, 84, 143, 0.52), rgba(20, 136, 221, 0.22)),
+                url("{% static 'assets/image/bc3.jpeg' %}");
+            background-size: cover, cover;
+            background-repeat: no-repeat, no-repeat;
+            background-position: center center, center center;
+            background-color: #0d1b2f;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            border-radius: 0;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 0;
+            border-right: 0;
             padding: 1.4rem;
-            width: 100%;
         }
 
         .profile-card {
@@ -465,10 +473,69 @@
             margin-top: 1rem;
         }
 
+        .skills-switch {
+            max-width: 1020px;
+            margin: 0 auto 1rem;
+            padding: 0.3rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(10, 14, 24, 0.55);
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 0.35rem;
+        }
+
+        .skills-tab {
+            border: 0;
+            background: transparent;
+            color: #d1d5db;
+            border-radius: 999px;
+            padding: 0.55rem 0.45rem;
+            font: inherit;
+            font-size: clamp(0.74rem, 1vw, 1rem);
+            white-space: normal;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-width: 0;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .skills-tab:hover,
+        .skills-tab:focus {
+            background: rgba(255, 255, 255, 0.14);
+            color: #ffffff;
+            outline: none;
+        }
+
+        .skills-tab.is-active {
+            background: #f8fafc;
+            color: #111827;
+            font-weight: 700;
+        }
+
         .skills-card {
             border-radius: 14px;
             padding: 1.1rem;
             border: 1px solid rgba(255, 255, 255, 0.14);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .skills-card:hover,
+        .skills-card:focus {
+            transform: translateY(-3px);
+            border-color: rgba(255, 255, 255, 0.42);
+            box-shadow: 0 16px 26px rgba(0, 0, 0, 0.28);
+            outline: none;
+        }
+
+        .skills-card.is-active {
+            border-color: rgba(255, 255, 255, 0.75);
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.22) inset;
         }
 
         .skills-card h4 {
@@ -781,7 +848,7 @@
             }
 
             main {
-                padding: 0 0.8rem 0;
+                padding: 0;
             }
 
             section {
@@ -791,7 +858,8 @@
             .hero {
                 min-height: auto;
                 padding: 1rem;
-                border-radius: 14px;
+                border-radius: 0;
+                background-position: center center, center center;
             }
 
             .profile-card {
