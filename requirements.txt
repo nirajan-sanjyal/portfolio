@@ -1,0 +1,8 @@
+pillow == 9.4.0
+Django == 4.2.3
+psycopg2-binary == 2.9.6
+gunicorn == 26.0.0
+dj-database-url == 1.2.0
+whitenoise == 6.4.0
+python-dotenv == 1.0.0
+
