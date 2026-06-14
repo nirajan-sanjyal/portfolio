@@ -21,13 +21,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2t1cfh13q40o4m-5wl6&g3w#@$ue7@irpb7@crukj6hv*&5so*'
+# SECRET_KEY = 'django-insecure-2t1cfh13q40o4m-5wl6&g3w#@$ue7@irpb7@crukj6hv*&5so*'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    "nirajansanjyal.com.np",
+    "www.nirajansanjyal.com.np",
+    ".onrender.com"
+]
 
 # Application definition
 
@@ -49,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'MyPortfolio.urls'
